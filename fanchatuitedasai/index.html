@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>反差推特大赛-参赛规则与出圈作品观察</title>
+<meta name="description" content="反差推特大赛是围绕人物与场景强烈反差展开的短图文征集活动，本文整理参赛规则、赛程节点、出圈作品拆解、评分口径与历届热门选题，供创作者与围观者参考。">
+<meta name="keywords" content="反差推特大赛">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1b2b'/%3E%3Ccircle cx='24' cy='26' r='10' fill='%23ff6b3d'/%3E%3Crect x='30' y='32' width='24' height='20' rx='4' fill='%23f6f1e7'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "反差推特大赛",
+  "inLanguage": "zh-CN",
+  "description": "反差推特大赛参赛规则、赛程、出圈作品与评分口径汇总。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "反差推特大赛的参赛图必须同一个人吗？",
+      "acceptedAnswer": {"@type": "Answer", "text": "规则要求同一参与者出镜，前后两张图的服装、场景、妆造可以完全不同，但身份需一致，代拍或拼图冒名会被移出候选名单。"}
+    },
+    {
+      "@type": "Question",
+      "name": "反差推特大赛投稿能带第三方水印吗？",
+      "acceptedAnswer": {"@type": "Answer", "text": "带其他平台账号水印的图片会被降权，复赛阶段要求提交无二次水印原图，水印只允许本人账号标识。"}
+    },
+    {
+      "@type": "Question",
+      "name": "反差推特大赛初赛和复赛的评分差别在哪？",
+      "acceptedAnswer": {"@type": "Answer", "text": "初赛看反差成立度与构图完整度，复赛加入口碑票与评委分，评委分占比 40%，口碑票通过话题页点赞和转发合计统计。"}
+    },
+    {
+      "@type": "Question",
+      "name": "反差推特大赛可以用 AI 生成图参赛吗？",
+      "acceptedAnswer": {"@type": "Answer", "text": "纯 AI 生成图不进入正式榜单，允许用于周边或效果预览类环节，但参赛主体图必须为真实拍摄并在报名表标注拍摄时间。"}
+    },
+    {
+      "@type": "Question",
+      "name": "反差推特大赛落选后作品还能继续发吗？",
+      "acceptedAnswer": {"@type": "Answer", "text": "落选不影响自行发布，赛事组只对入围作品保留展示授权，未入围作品的二次使用由作者自行决定。"}
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#1b1b2b;
+  --ink-2:#3a3a52;
+  --muted:#6c6c85;
+  --paper:#f6f1e7;
+  --card:#fffdf7;
+  --line:#ddd5c4;
+  --accent:#ff6b3d;
+  --accent-2:#2f6f62;
+  --accent-3:#f2c14e;
+  --radius:14px;
+  --shadow:0 6px 20px rgba(27,27,43,.08);
+  --fs-h1:clamp(28px,4.4vw,46px);
+  --fs-h2:clamp(20px,2.6vw,26px);
+  --fs-h3:17px;
+  --fs-body:16px;
+  --fs-sm:14px;
+  --fs-xs:12.5px;
+  --gap:22px;
+  --sticky-h:104px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--sticky-h) + 12px)}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  font-size:var(--fs-body);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent-2);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+h1,h2,h3{line-height:1.35;margin:0}
+ul,ol{margin:0;padding-left:1.15em}
+p{margin:0 0 12px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* 吸顶容器 */
+.sticky-shell{position:sticky;top:0;z-index:50}
+.notice{
+  background:var(--ink);
+  color:#f3ecdd;
+  font-size:var(--fs-sm);
+  padding:8px 0;
+}
+.notice .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.notice b{color:var(--accent-3);font-weight:600}
+.notice .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block}
+.notice a{color:#f3ecdd;border-bottom:1px dashed rgba(243,236,221,.45)}
+.notice a:hover{color:var(--accent-3);text-decoration:none}
+
+header.site{
+  background:rgba(246,241,231,.96);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.head-row{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand svg{width:38px;height:38px}
+.brand .name{font-weight:800;font-size:18px;letter-spacing:.5px}
+.brand .name em{font-style:normal;color:var(--accent)}
+nav.main{display:flex;gap:6px;flex-wrap:wrap;margin-left:8px}
+nav.main a{
+  font-size:var(--fs-sm);color:var(--ink-2);
+  padding:6px 10px;border-radius:999px;border:1px solid transparent;
+}
+nav.main a:hover{background:#fff;border-color:var(--line);text-decoration:none}
+nav.main a.active{background:var(--ink);color:#fff}
+.head-tools{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.searchbox{display:flex;align-items:center;background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 4px 3px 12px}
+.searchbox input{
+  border:0;outline:0;background:transparent;font:inherit;font-size:var(--fs-sm);
+  width:150px;color:var(--ink);padding:4px 0;
+}
+.searchbox button{
+  border:0;background:var(--accent);color:#fff;border-radius:999px;
+  padding:6px 14px;font:inherit;font-size:var(--fs-sm);cursor:pointer;
+}
+.searchbox button:hover{background:#e85a2c}
+.searchbox button:focus-visible,input:focus-visible,button:focus-visible,a:focus-visible,summary:focus-visible{
+  outline:3px solid rgba(47,111,98,.55);outline-offset:2px;
+}
+.btn{
+  display:inline-block;padding:8px 18px;border-radius:999px;font-size:var(--fs-sm);
+  background:var(--ink);color:#fff;border:1px solid var(--ink);cursor:pointer;font-family:inherit;
+}
+.btn:hover{background:var(--accent);border-color:var(--accent);text-decoration:none;color:#fff}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.menu-toggle{
+  display:none;border:1px solid var(--line);background:#fff;border-radius:10px;
+  padding:6px 10px;font:inherit;font-size:var(--fs-sm);cursor:pointer;color:var(--ink);
+}
+#search-msg{font-size:var(--fs-xs);color:var(--accent-2);width:100%;padding:2px 4px 8px}
+#search-msg:empty{display:none}
+
+/* 首屏 */
+.hero{position:relative;padding:44px 0 52px;overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:var(--fs-xs);
+  letter-spacing:1px;color:var(--accent-2);text-transform:uppercase;
+  border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 12px;
+}
+.kicker span{width:7px;height:7px;background:var(--accent);border-radius:50%}
+.hero h1{font-size:var(--fs-h1);letter-spacing:1px;margin:16px 0 14px}
+.hero .lead{font-size:16.5px;color:var(--ink-2);max-width:34em}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.hero-stats{display:flex;gap:26px;margin-top:28px;flex-wrap:wrap}
+.hero-stats div strong{display:block;font-size:24px;color:var(--ink);line-height:1.2}
+.hero-stats div span{font-size:var(--fs-xs);color:var(--muted)}
+.hero-art{position:relative}
+.hero-art .frame{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:16px;
+}
+.hero-art svg{width:100%;height:auto;border-radius:8px;display:block}
+.hero-art .caption{font-size:var(--fs-xs);color:var(--muted);margin-top:10px;line-height:1.6}
+
+/* 版面 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:34px;padding-bottom:20px}
+main{min-width:0}
+section.block{margin-bottom:44px;scroll-margin-top:calc(var(--sticky-h) + 12px)}
+.sec-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.sec-head h2{font-size:var(--fs-h2);letter-spacing:.5px}
+.sec-head .tag{font-size:var(--fs-xs);color:var(--accent-2);border:1px solid var(--line);background:#fff;border-radius:999px;padding:2px 10px}
+.sec-head p{font-size:var(--fs-sm);color:var(--muted);margin:0}
+.lead-para{color:var(--ink-2);margin-bottom:18px}
+
+/* 卡片网格 */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card img{width:100%;height:150px;object-fit:cover}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:var(--fs-h3)}
+.card .meta{font-size:var(--fs-xs);color:var(--muted)}
+.card p{font-size:var(--fs-sm);color:var(--ink-2);margin:0}
+.card .foot{margin-top:auto;padding-top:8px;font-size:var(--fs-xs);color:var(--accent-2)}
+
+/* 紧凑列表 */
+.tight{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:6px 18px}
+.tight li{list-style:none;padding:12px 0;border-bottom:1px dashed var(--line);display:flex;gap:12px;align-items:flex-start}
+.tight li:last-child{border-bottom:0}
+.tight .date{flex:0 0 74px;font-size:var(--fs-xs);color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px}
+.tight .txt{font-size:var(--fs-sm);color:var(--ink-2)}
+.tight .txt b{color:var(--ink)}
+.tight ul{padding-left:0}
+
+/* 频道索引 */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips a{
+  display:inline-flex;flex-direction:column;gap:2px;
+  border:1px solid var(--line);background:var(--card);border-radius:10px;
+  padding:9px 14px;font-size:var(--fs-sm);color:var(--ink);
+}
+.chips a small{font-size:var(--fs-xs);color:var(--muted)}
+.chips a:hover{border-color:var(--accent);text-decoration:none;background:#fff}
+.chips a:focus-visible{outline:3px solid rgba(47,111,98,.55);outline-offset:2px}
+
+/* 深度解析 */
+.analysis{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px}
+.analysis h2{font-size:var(--fs-h2);margin-bottom:6px}
+.analysis .sub{color:var(--muted);font-size:var(--fs-sm);margin-bottom:18px}
+.analysis h3{font-size:var(--fs-h3);margin:24px 0 8px;color:var(--accent-2)}
+.analysis p{color:var(--ink-2)}
+.quote{
+  border-left:4px solid var(--accent);background:#fff8f2;
+  padding:12px 16px;border-radius:0 10px 10px 0;margin:16px 0;
+  font-size:var(--fs-sm);color:var(--ink-2);
+}
+.quote cite{display:block;font-style:normal;color:var(--muted);font-size:var(--fs-xs);margin-top:6px}
+table.cmp{width:100%;border-collapse:collapse;font-size:var(--fs-sm);margin:14px 0}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:#f3ede0;font-weight:600;color:var(--ink)}
+table.cmp td{color:var(--ink-2)}
+
+/* 步骤 */
+.steps{counter-reset:s;display:grid;gap:14px}
+.steps .step{
+  counter-increment:s;position:relative;padding:14px 18px 14px 60px;
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+}
+.steps .step::before{
+  content:counter(s,decimal-leading-zero);position:absolute;left:16px;top:14px;
+  font-weight:800;font-size:18px;color:var(--accent);
+}
+.steps .step h3{font-size:var(--fs-h3);margin-bottom:4px}
+.steps .step p{font-size:var(--fs-sm);color:var(--ink-2);margin:0}
+
+/* 对照面板 */
+.panel{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--card)}
+.panel > div{padding:18px 20px}
+.panel .a{background:#fff8f2;border-right:1px solid var(--line)}
+.panel h3{font-size:var(--fs-h3);margin-bottom:8px}
+.panel ul{font-size:var(--fs-sm);color:var(--ink-2);padding-left:1.1em}
+.panel li{margin-bottom:6px}
+
+/* FAQ */
+details.faq{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 16px;margin-bottom:10px}
+details.faq summary{
+  cursor:pointer;padding:14px 0;font-weight:600;font-size:var(--fs-sm);list-style:none;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"＋";color:var(--accent);font-weight:700}
+details.faq[open] summary::after{content:"－"}
+details.faq .ans{padding:0 0 14px;font-size:var(--fs-sm);color:var(--ink-2)}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.cmt{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.cmt .who{display:flex;align-items:center;gap:8px;font-size:var(--fs-xs);color:var(--muted);margin-bottom:6px}
+.cmt .av{width:26px;height:26px;border-radius:50%;background:var(--accent-3);display:grid;place-items:center;font-size:12px;color:var(--ink);font-weight:700}
+.cmt:nth-child(2n) .av{background:#cfe4de;color:var(--accent-2)}
+.cmt p{font-size:var(--fs-sm);color:var(--ink-2);margin:0}
+
+/* 资讯 */
+.news{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.news article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.news h3{font-size:15.5px;margin-bottom:6px}
+.news p{font-size:var(--fs-sm);color:var(--ink-2);margin:0}
+.news .src{font-size:var(--fs-xs);color:var(--muted);margin-top:8px}
+
+/* 标签 */
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags a{font-size:var(--fs-sm);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;color:var(--ink)}
+.tags a:hover{border-color:var(--accent);background:#fff;text-decoration:none}
+
+/* 时间线 */
+.timeline{border-left:2px solid var(--line);margin-left:8px;padding-left:20px;display:grid;gap:16px}
+.timeline .tl{position:relative;font-size:var(--fs-sm);color:var(--ink-2)}
+.timeline .tl::before{content:"";position:absolute;left:-27px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--accent);border:2px solid var(--paper)}
+.timeline .tl b{color:var(--ink);display:block}
+
+/* 侧栏 */
+aside.side{display:flex;flex-direction:column;gap:22px}
+.side .widget{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.side h2{font-size:16px;margin-bottom:10px;letter-spacing:.5px}
+.side ol{font-size:var(--fs-sm);color:var(--ink-2);padding-left:1.2em}
+.side ol li{margin-bottom:8px}
+.side .mini{font-size:var(--fs-xs);color:var(--muted)}
+.side-nav{list-style:none;padding:0;margin:0}
+.side-nav a{display:block;font-size:var(--fs-sm);color:var(--ink-2);padding:7px 10px;border-radius:8px;border-left:3px solid transparent}
+.side-nav a:hover{background:#f3ede0;text-decoration:none}
+.side-nav a.active{background:#fff;border-left-color:var(--accent);color:var(--ink);font-weight:600}
+.rank-list{list-style:none;padding:0;margin:0;counter-reset:r}
+.rank-list li{counter-increment:r;display:flex;gap:10px;font-size:var(--fs-sm);color:var(--ink-2);padding:7px 0;border-bottom:1px dashed var(--line)}
+.rank-list li:last-child{border-bottom:0}
+.rank-list li::before{content:counter(r);font-weight:800;color:var(--accent);flex:0 0 18px}
+.side .btn{width:100%;text-align:center}
+
+/* 页尾 */
+footer.site{background:var(--ink);color:#d9d2c4;margin-top:30px;padding:40px 0 28px;font-size:var(--fs-sm)}
+footer.site h2{color:#fff;font-size:16px;margin-bottom:10px}
+footer.site .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+footer.site a{color:#d9d2c4}
+footer.site a:hover{color:var(--accent-3)}
+footer.site ul{list-style:none;padding:0;display:grid;gap:6px}
+footer.site .fnote{border-top:1px solid rgba(255,255,255,.14);margin-top:26px;padding-top:16px;font-size:var(--fs-xs);color:#a8a196;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+footer.site .brand-foot{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:18px;margin-bottom:10px}
+footer.site .brand-foot svg{width:30px;height:30px}
+
+/* 回到顶部 */
+#toTop{
+  position:fixed;right:18px;bottom:22px;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);color:var(--ink);
+  display:none;place-items:center;cursor:pointer;z-index:60;box-shadow:var(--shadow);font-size:16px;
+}
+#toTop.show{display:grid}
+
+/* 响应式 */
+@media (max-width:980px){
+  .layout{grid-template-columns:1fr}
+  aside.side{order:2}
+  main{order:1}
+  .hero .grid{grid-template-columns:1fr;gap:26px}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  footer.site .fgrid{grid-template-columns:1fr 1fr}
+  nav.main{margin-left:0}
+  .head-tools{width:100%;margin-left:0}
+}
+@media (max-width:640px){
+  .menu-toggle{display:inline-block;margin-left:auto}
+  nav.main{display:none;width:100%;flex-direction:column;gap:2px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px;margin-top:6px}
+  nav.main.open{display:flex}
+  nav.main a{padding:10px 12px;border-radius:8px}
+  .head-tools{margin-top:6px}
+  .searchbox{flex:1}
+  .searchbox input{width:100%}
+  .cards{grid-template-columns:1fr}
+  .comments,.news{grid-template-columns:1fr}
+  .panel{grid-template-columns:1fr}
+  .panel .a{border-right:0;border-bottom:1px solid var(--line)}
+  .analysis{padding:20px 18px}
+  .hero{padding:30px 0 36px}
+  .hero-stats{gap:18px}
+  .hero-stats div strong{font-size:20px}
+  footer.site .fgrid{grid-template-columns:1fr}
+  #toTop{bottom:16px;right:14px}
+  .tight .date{flex-basis:64px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .card{transition:none}
+  .card:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-shell">
+  <div class="notice" aria-label="站内公告">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <b>赛程更新</b>
+      <span>11 月 6 日 22:00 起复赛投票通道开启，共 36 组作品入围；<a href="/#schedule">查看完整时间线</a></span>
+      <span style="margin-left:auto">今天（11 月 8 日）公布「城市通勤」子话题命题补充说明</span>
+    </div>
+  </div>
+  <header class="site">
+    <div class="wrap head-row">
+      <div class="brand">
+        <svg viewBox="0 0 64 64" role="img" aria-label="反差推特大赛标志">
+          <rect width="64" height="64" rx="14" fill="#1b1b2b"/>
+          <circle cx="23" cy="25" r="10" fill="#ff6b3d"/>
+          <rect x="30" y="31" width="24" height="20" rx="4" fill="#f6f1e7"/>
+          <path d="M8 52 L20 40 L32 52 Z" fill="#2f6f62"/>
+        </svg>
+        <span class="name">反差推特大赛<em>.</em></span>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">菜单</button>
+      <nav class="main" id="mainNav" aria-label="主题导航">
+        <a href="/#overview" class="active">领域概览</a>
+        <a href="/#picks">精选作品</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#channels">频道入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+      <div class="head-tools">
+        <form class="searchbox" role="search" id="searchForm" onsubmit="return false;">
+          <label for="q" style="position:absolute;left:-9999px">站内搜索</label>
+          <input type="search" id="q" name="q" placeholder="搜作品、规则或频道" autocomplete="off">
+          <button type="submit" id="searchBtn">搜索</button>
+        </form>
+        <a class="btn ghost" href="/#guide">参赛指南</a>
+      </div>
+      <div id="search-msg" role="status" aria-live="polite"></div>
+    </div>
+  </header>
+</div>
+
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="kicker"><span></span>短图文征集 · 第十届</span>
+      <h1>反差推特大赛</h1>
+      <p class="lead">同一张身份证、两套完全相反的生活切片：早高峰的西装领带，和周末凌晨三点的骑行头灯。比赛收的是这种前后摆在一起的组图，评的是反差成不成立、讲不讲得清楚。</p>
+      <div class="hero-actions">
+        <a class="btn" href="/#guide">看投稿步骤</a>
+        <a class="btn ghost" href="/#picks">浏览入围 36 组</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>36</strong><span>复赛入围组图</span></div>
+        <div><strong>1,284</strong><span>初赛有效投稿</span></div>
+        <div><strong>9</strong><span>评委席位</span></div>
+        <div><strong>40%</strong><span>复赛评委分占比</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="frame">
+        <svg viewBox="0 0 480 300" role="img" aria-label="左右分屏的反差构图示意：左侧办公工位，右侧夜骑装备">
+          <rect width="480" height="300" fill="#f3ede0"/>
+          <g>
+            <rect x="18" y="18" width="210" height="264" rx="10" fill="#e8e2d2"/>
+            <rect x="44" y="52" width="158" height="96" rx="6" fill="#cfd8d5"/>
+            <rect x="44" y="170" width="110" height="10" rx="5" fill="#a9a291"/>
+            <rect x="44" y="190" width="158" height="10" rx="5" fill="#a9a291"/>
+            <circle cx="70" cy="132" r="16" fill="#2f6f62"/>
+            <rect x="96" y="118" width="70" height="12" rx="6" fill="#1b1b2b"/>
+            <rect x="96" y="140" width="48" height="8" rx="4" fill="#6c6c85"/>
+            <path d="M44 230 L154 230 L154 258 L44 258 Z" fill="#d7cfbb"/>
+            <text x="118" y="248" font-size="13" fill="#6c6c85" text-anchor="middle">09:15 工位</text>
+          </g>
+          <g transform="translate(252,0)">
+            <rect x="0" y="18" width="210" height="264" rx="10" fill="#1b1b2b"/>
+            <circle cx="150" cy="96" r="42" fill="#ff6b3d" opacity="0.92"/>
+            <circle cx="150" cy="96" r="22" fill="#f6f1e7"/>
+            <path d="M40 200 L86 150 L132 200 Z" fill="#2f6f62"/>
+            <path d="M60 240 L120 240" stroke="#f2c14e" stroke-width="6" stroke-linecap="round"/>
+            <text x="105" y="262" font-size="13" fill="#c9c2b3" text-anchor="middle">03:00 夜骑</text>
+          </g>
+          <path d="M228 150 L252 150" stroke="#ff6b3d" stroke-width="4" stroke-dasharray="6 6"/>
+        </svg>
+        <p class="caption">示意图：左为工作日 09:15 的工位状态，右为周末 03:00 的夜骑补给站。实际参赛需同人出镜且可核对拍摄时间。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap layout">
+<main>
+
+  <section class="block" id="overview">
+    <div class="sec-head">
+      <h2>反差推特大赛是什么</h2>
+      <span class="tag">领域概览</span>
+    </div>
+    <p class="lead-para">这比赛的核心不是比谁更会修图，是比谁能把一个人的两种状态摆在一起，让看图的人第一眼就愣一下。十年下来它形成了固定词汇：反差成立度、场景可信度、二次水印、原图时间戳。</p>
+    <div class="cards">
+      <article class="card">
+        <img src="https://picsum.photos/seed/fancha-overview-1/560/320" width="560" height="320" loading="lazy" alt="展板上并排张贴的两张人物生活照与规则说明卡">
+        <div class="body">
+          <h3>组图规则：必须是同一个人</h3>
+          <p>前后两张图允许换妆、换场地、换季节，但出镜身份须一致。代拍、拼图和变声处理会在人工复核环节被拦下。</p>
+          <div class="foot">阅读 4 分钟</div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/fancha-overview-2/560/320" width="560" height="320" loading="lazy" alt="评委在长桌边对照打印稿讨论入围组图">
+        <div class="body">
+          <h3>评分口径：反差成立度占三成</h3>
+          <p>初赛评委打分表分四项：反差成立度 30%、构图完整度 25%、故事可读性 25%、拍摄真实度 20%，满分 100。</p>
+          <div class="foot">评分表公开下载</div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/fancha-overview-3/560/320" width="560" height="320" loading="lazy" alt="手机屏幕上的话题页时间线与投票按钮">
+        <div class="body">
+          <h3>赛程：三周走完初赛到复赛</h3>
+          <p>10 月 19 日开投，11 月 4 日初赛截止，11 月 6 日公布名单，11 月 15 日复赛结束，11 月 18 日颁奖。</p>
+          <div class="foot">线下展 11 月 22 日</div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/fancha-overview-4/560/320" width="560" height="320" loading="lazy" alt="骑行者卸下头盔与西装外套搭在车把上的对比画面">
+        <div class="body">
+          <h3>为什么叫「推特式反差」</h3>
+          <p>画面通常竖幅、占满手机首屏、左图右图文案三行内讲完。这对取景和排布要求比普通摄影比赛更紧。</p>
+          <div class="foot">格式要求：9:16 或 1:1</div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/fancha-overview-5/560/320" width="560" height="320" loading="lazy" alt="工作台上摊开的报名表、拍摄时间截图与证件贴纸">
+        <div class="body">
+          <h3>报名要交的三样东西</h3>
+          <p>组图原文件、拍摄时间截图、本人账号主页链接。缺时间截图的作品进入待核区，不直接淘汰。</p>
+          <div class="foot">核验最快 24 小时</div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/fancha-overview-6/560/320" width="560" height="320" loading="lazy" alt="入围作品墙上贴满编号卡片与观众留言贴纸">
+        <div class="body">
+          <h3>入围之后会发生什么</h3>
+          <p>36 组作品进入线下展与线上投票页，作者需补交一段 60 秒口述，解释两组画面的拍摄顺序与选择理由。</p>
+          <div class="foot">口述稿统一收录</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="picks">
+    <div class="sec-head">
+      <h2>精选作品推荐</h2>
+      <span class="tag">编辑挑选</span>
+      <p>三项标准：反差一眼可见、细节经得起盯、文案不替读者下结论。</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <img src="https://picsum.photos/seed/fancha-pick-01/560/320" width="560" height="320" loading="lazy" alt="银行柜员制服与越野跑背心并列摆放">
+        <div class="body">
+          <h3>柜员与百公里越野跑</h3>
+          <p>作品编号 C-17。左图是 10 月 22 日柜台前的工牌，右图是 10 月 25 日 4:40 出发头灯照。作者在口述里提到，两张图相隔 62 小时。</p>
+          <div class="foot">入围 · 口碑票第 3</div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/fancha-pick-02/560/320" width="560" height="320" loading="lazy" alt="厨房案板上的家常菜与米其林风格摆盘对照">
+        <div class="body">
+          <h3>食堂大锅菜与法餐摆盘</h3>
+          <p>作品编号 C-24。作者是高校食堂配菜员，右图的摆盘发生在他自费报名的周末班教室里，配有课程收据打码图。</p>
+          <div class="foot">入围 · 评委分第 5</div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/fancha-pick-03/560/320" width="560" height="320" loading="lazy" alt="堆满文件的书桌与整面墙的唱片收藏">
+        <div class="body">
+          <h3>审计底稿与黑胶收藏墙</h3>
+          <p>作品编号 C-31。左图桌面有 6 摞待归档底稿，右图墙上按年份排了 214 张黑胶。反差来自空间秩序而不是人物表情。</p>
+          <div class="foot">入围 · 编辑特别提名</div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/fancha-pick-04/560/320" width="560" height="320" loading="lazy" alt="安静病房走廊与演唱会人群灯光">
+        <div class="body">
+          <h3>夜班护士与乐队鼓手</h3>
+          <p>作品编号 C-08。左图 11 月 1 日 02:30 护士站值班，右图 11 月 2 日 21:00 地下演出。作者交出排班表截图后核验通过。</p>
+          <div class="foot">入围 · 讨论度第 1</div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/fancha-pick-05/560/320" width="560" height="320" loading="lazy" alt="外卖箱旁站着穿正装的人与雨天街景">
+        <div class="body">
+          <h3>兼职骑手与末班地铁</h3>
+          <p>作品编号 C-02。同一个人，白天送单，夜里去上成人本科的财务课。照片里能看清书包侧袋的教材封面。</p>
+          <div class="foot">入围 · 故事票第 2</div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/fancha-pick-06/560/320" width="560" height="320" loading="lazy" alt="老式缝纫机与电脑屏幕上的建模软件">
+        <div class="body">
+          <h3>裁缝铺学徒与三维建模</h3>
+          <p>作品编号 C-29。作者把外婆的缝纫机改成工作台，左边量体，右边渲染。评委给了构图完整度 24/25。</p>
+          <div class="foot">入围 · 评委分第 2</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="updates">
+    <div class="sec-head">
+      <h2>最新更新</h2>
+      <span class="tag">赛务动态</span>
+    </div>
+    <ul class="tight">
+      <li><span class="date">11月08日</span><span class="txt"><b>命题补充说明发布。</b>「城市通勤」子话题新增一条：允许使用行车记录仪截图，但需保留时间水印，且人物正脸不得被打码。</span></li>
+      <li><span class="date">11月07日</span><span class="txt"><b>复赛投票页修复。</b>前一晚 23:40 出现的重复计票问题已回滚，C-17 与 C-31 的票数各核减 48 与 31 票，差额在公示页可查。</span></li>
+      <li><span class="date">11月06日</span><span class="txt"><b>入围名单公示。</b>1,284 组初赛有效投稿中筛出 36 组，另有 7 组进入待核区，原因集中在时间戳缺失与二次水印。</span></li>
+      <li><span class="date">11月04日</span><span class="txt"><b>初赛截止。</b>最后 6 小时收到 218 组投稿，服务器在 21:10 短时拥堵，已顺延至 22:00 关闭入口。</span></li>
+      <li><span class="date">11月02日</span><span class="txt"><b>评委名单确认。</b>9 名评委中含 3 名纪实摄影师、2 名平台运营、2 名往届选手、2 名普通用户代表，评分权等分。</span></li>
+      <li><span class="date">10月29日</span><span class="txt"><b>规则补丁。</b>明确 AI 生成图不参与正式评选，可用于周边展示；对「同一人」的判定增加排班表、门禁记录等辅助材料。</span></li>
+      <li><span class="date">10月19日</span><span class="txt"><b>初赛开投。</b>首日涌入 174 组作品，话题页浏览量 12.6 万，其中「工位与夜骑」类内容占比 31%。</span></li>
+    </ul>
+  </section>
+
+  <section class="block" id="channels">
+    <div class="sec-head">
+      <h2>按反差类型找作品</h2>
+      <span class="tag">频道索引</span>
+      <p>频道名对应搜索里最常被输入的具体类别，不是抽象标签。</p>
+    </div>
+    <div class="chips">
+      <a href="/#picks">工位与户外 <small>反差不靠表情，靠环境切换</small></a>
+      <a href="/#picks">制服与私服 <small>职业身份与业余爱好对照</small></a>
+      <a href="/#picks">夜班与白天 <small>时间轴上的两种状态</small></a>
+      <a href="/#picks">厨房与大锅菜 <small>相似动作、不同规格</small></a>
+      <a href="/#picks">病房与舞台 <small>安静与喧闹并排</small></a>
+      <a href="/#picks">外卖箱与教材 <small>身份叠加型反差</small></a>
+      <a href="/#picks">缝纫机与建模 <small>手工与数字工具同框</small></a>
+      <a href="/#picks">出租屋与收藏 <small>空间秩序反差</small></a>
+      <a href="/#picks">保安亭与合唱团 <small>声音与岗位反差</small></a>
+      <a href="/#picks">卡车与手冲咖啡 <small>粗粝与精细对照</small></a>
+      <a href="/#picks">支教与城市夜跑 <small>地理跨度带来的反差</small></a>
+      <a href="/#picks">菜市场与胶片相机 <small>日常场景与器材反差</small></a>
+    </div>
+  </section>
+
+  <section class="block" id="deep">
+    <div class="analysis">
+      <h2>深度解析：反差成立，靠的是可核对的细节</h2>
+      <p class="sub">以下判断均可在公示页与往届作品集中查到对应条目，欢迎拿证据反驳。</p>
+
+      <h3>一、口述稿比修图更能拉开名次</h3>
+      <p>翻第九届前 12 名的作品页，能发现一个规律：排名靠前的作品，口述稿普遍在 45 到 90 秒之间，且包含具体时间、地点、拍摄顺序。第 4 名《凌晨四点的面团》口述里写明了两次拍摄相隔 19 天，并附了面包店考勤照片的局部。相反，排名 24 到 30 位的作品里，有 5 组口述时长不足 20 秒，只说「想表现自己两面」。评委打分表上「故事可读性」这一项，这 5 组的平均分是 16.4，而前 12 名平均 22.1。</p>
+      <p>可核对的做法：打开任意入围作品的详情页，注意看「拍摄时间」与「口述字数」两栏。两者之间没有必然正相关，但两项都偏低的组图，复赛票数几乎都掉出前 20。</p>
+
+      <h3>二、「同一个人」的判定，材料比长相更有用</h3>
+      <p>本届 7 组待核作品里，有 4 组争议来自前后图像素差异过大，另有 3 组是因为第二张图由他人拍摄。复核流程要求补交三类材料之一：排班表、门禁或交通记录、同一件私人物品在两张图中出现。C-08 的通过依据是护士站交接班表角标与演出票根上的日期，而不是任何人脸比对。</p>
+      <table class="cmp">
+        <thead><tr><th>材料类型</th><th>复核通过率（本届样本）</th><th>常见问题</th></tr></thead>
+        <tbody>
+          <tr><td>拍摄时间截图</td><td>较高</td><td>截图被裁剪掉状态栏</td></tr>
+          <tr><td>排班表/考勤</td><td>较高</td><td>姓名栏打码过多</td></tr>
+          <tr><td>私人物品同框</td><td>中等</td><td>物品在第二张图被替换</td></tr>
+          <tr><td>仅口头说明</td><td>低</td><td>无第三方可查痕迹</td></tr>
+        </tbody>
+      </table>
+
+      <h3>三、票数高不等于反差强，两者分开看</h3>
+      <p>11 月 7 日 23:40 的重复计票问题，让 C-17 一度冲到票数第一。回滚后它排第 3，而评委分第 2 的 C-29 票数只排到第 14。这两个名次差说明：口碑票偏向画面冲击强、便于转发的组图，评委更看重构图与完整叙事。大赛没有把两者合成一个总分，而是分列展示。</p>
+      <div class="quote">
+        「我投 C-08 是因为那张夜班护士站的照片，墙上时钟和交接本日期能对上，不是因为它看起来更惨。」——公示页用户留言，11 月 7 日 09:12
+        <cite>留言区原始措辞，未做删改</cite>
+      </div>
+
+      <h3>四、争议点：允许行车记录仪截图是不是放水</h3>
+      <p><b>事实：</b>11 月 8 日补充说明允许「城市通勤」子话题使用行车记录仪截图，前提是保留时间水印、正脸不打码。<b>回应：</b>赛务组在说明里给的理由是通勤类反差本来就发生在路上，手机不便拍摄。<b>转述：</b>有往届选手在评论区提出，这会让器材差异影响公平。<b>推测：</b>如果复赛阶段同类投稿明显增多，下一届可能会把该子话题单列评分，而不是并入主榜。以上四层信息请分开看待，公示页目前只确认了第一层。</p>
+    </div>
+  </section>
+
+  <section class="block" id="guide">
+    <div class="sec-head">
+      <h2>从拍两张图到进入复赛</h2>
+      <span class="tag">体验指南</span>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>先定反差轴，再想画面</h3>
+        <p>常见的轴有四条：时间（白天与深夜）、空间（工位与户外）、身份（职业与爱好）、秩序（整洁与堆叠）。选一条就够，两条以上容易在 9:16 画面里互相打架。</p>
+      </div>
+      <div class="step">
+        <h3>用同一件物品当锚点</h3>
+        <p>工牌、头盔、围裙、教材都行。锚点出现在两张图里，读者才不用猜是不是同一个人。C-02 用的是书包侧袋那本教材，C-31 用的是同一支钢笔。</p>
+      </div>
+      <div class="step">
+        <h3>拍摄时间截图要带状态栏</h3>
+        <p>本届待核作品里，有 2 组因为截图裁掉了顶部时间而被要求补交。截图请保留完整屏幕，包括信号与电量图标。</p>
+      </div>
+      <div class="step">
+        <h3>文案写三行，别下结论</h3>
+        <p>第一行交代时间地点，第二行交代两张图的关系，第三行留白。把「我其实很热爱生活」这种总结删掉，评委打分表里没有这一项。</p>
+      </div>
+      <div class="step">
+        <h3>交稿前自查水印与比例</h3>
+        <p>其他平台账号水印会被降权；两张图比例需一致，9:16 或 1:1 二选一。复赛要求补交无二次水印原图。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="faq">
+    <div class="sec-head">
+      <h2>参赛常见问题</h2>
+      <span class="tag">问答</span>
+    </div>
+    <details class="faq">
+      <summary>参赛图必须同一个人吗？</summary>
+      <div class="ans">规则要求同一参与者出镜，前后两张图的服装、场景、妆造可以完全不同，但身份需一致。代拍或拼图冒名会被移出候选名单，本届待核的 7 组里有 3 组属于这一类。</div>
+    </details>
+    <details class="faq">
+      <summary>投稿能带第三方平台水印吗？</summary>
+      <div class="ans">带其他平台账号水印的图片会被降权，复赛阶段要求提交无二次水印原图，水印只允许本人账号标识。初赛阶段带外站水印的作品仍可进入评选，但会在人工复核时扣分。</div>
+    </details>
+    <details class="faq">
+      <summary>初赛和复赛的评分差别在哪？</summary>
+      <div class="ans">初赛看反差成立度与构图完整度，四项评委分相加；复赛加入口碑票与评委分，评委分占比 40%，口碑票通过话题页点赞和转发合计统计，两者分列公布。</div>
+    </details>
+    <details class="faq">
+      <summary>可以用 AI 生成图参赛吗？</summary>
+      <div class="ans">纯 AI 生成图不进入正式榜单，允许用于周边或效果预览类环节。参赛主体图必须为真实拍摄，并在报名表标注拍摄时间；10 月 29 日的规则补丁明确了这一条。</div>
+    </details>
+    <details class="faq">
+      <summary>落选后作品还能继续发吗？</summary>
+      <div class="ans">落选不影响自行发布。赛事组只对入围作品保留展示授权，未入围作品的二次使用由作者自行决定，线下展也不会收录未入围作品。</div>
+    </details>
+    <details class="faq">
+      <summary>城市通勤子话题为什么允许行车记录仪？</summary>
+      <div class="ans">11 月 8 日补充说明给出的理由是通勤类反差发生在路上，手机不便拍摄。使用截图需保留时间水印、人物正脸不得打码，作品仍需满足同人出镜要求。</div>
+    </details>
+  </section>
+
+  <section class="block" id="comments">
+    <div class="sec-head">
+      <h2>观众怎么说</h2>
+      <span class="tag">用户评论</span>
+    </div>
+    <div class="comments">
+      <div class="cmt">
+        <div class="who"><span class="av">岑</span>岑叶 · 11月7日 21:04</div>
+        <p>C-24 那张食堂大锅菜我盯了很久，案板边缘还有备菜清单，字能认出来。摆盘那张反而一般，盘子太干净了。</p>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="av">周</span>周末不加班 · 11月7日 18:37</div>
+        <p>票数榜前两名我不是很服气，组图好看但反差轴其实很常见，工位和户外这种组合今年至少十几组。</p>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="av">邵</span>邵一鸣 · 11月6日 23:11</div>
+        <p>C-31 的唱片墙让我想起自己搬家三次还留着的旧磁带。作品没说一句情怀，但两摞文件摆在那里就够了。</p>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="av">窦</span>窦小满 · 11月6日 20:56</div>
+        <p>重复计票那事处理得还行，至少公示了核减了多少。就是投票页做得太花，找入围编号得翻半天。</p>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="av">祁</span>祁舟 · 11月5日 14:22</div>
+        <p>C-08 排班表那个细节是真的，夜班交接本就是那个格式。不过护士站那张曝光有点过。</p>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="av">韦</span>韦槐 · 11月5日 10:08</div>
+        <p>行车记录仪能投稿这事我持保留意见。不是说不真实，是画质和手机差太多，摆在一起有点像两个比赛。</p>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="av">黎</span>黎子涵 · 11月4日 22:43</div>
+        <p>C-29 那个缝纫机改工作台我想抄作业，量体尺和数位板放一起确实不违和。</p>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="av">费</span>费临 · 11月4日 16:30</div>
+        <p>规则里「同一件私人物品」这条挺实用，比对着脸看半天靠谱。就是希望能列个物品清单模板。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="news">
+    <div class="sec-head">
+      <h2>相关资讯</h2>
+      <span class="tag">周边报道</span>
+    </div>
+    <div class="news">
+      <article>
+        <h3>线下展 11 月 22 日开放，36 组入围作品实拍打印</h3>
+        <p>展场设在旧纺织厂改造的展厅，入围作品按「时间反差点」从凌晨排到深夜。入口处设有投稿流程墙，可现场体验核验环节。</p>
+        <div class="src">来源：赛务公告 · 11月07日</div>
+      </article>
+      <article>
+        <h3>往届作品集新增第九届 12 组，含完整口述稿</h3>
+        <p>第九届档案补录完成，12 组作品的口述稿全文公开，其中《凌晨四点的面团》补充了面包店考勤照片的授权说明。</p>
+        <div class="src">来源：档案更新 · 11月05日</div>
+      </article>
+      <article>
+        <h3>三名评委接受访谈，谈「故事可读性」怎么扣分</h3>
+        <p>纪实摄影师陈陆在访谈中提到，他扣分最多的情形是文案替读者下结论。「你写我觉得自己很勇敢，我就不用看图了。」</p>
+        <div class="src">来源：访谈实录 · 11月03日</div>
+      </article>
+      <article>
+        <h3>报名表新增素材来源一栏，需填写设备与拍摄地点</h3>
+        <p>新版报名表要求填写拍摄设备型号与大致地点，适用于 11 月 8 日后提交的补充材料，已提交作品可在复赛阶段补填。</p>
+        <div class="src">来源：规则更新 · 11月02日</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="ranks">
+    <div class="sec-head">
+      <h2>复赛当前榜单（截至 11 月 8 日 12:00）</h2>
+      <span class="tag">榜单</span>
+    </div>
+    <ol class="tight" style="padding-left:18px">
+      <li style="display:list-item"><b>C-08 夜班护士与乐队鼓手</b> · 口碑票 4,812，评委分 88.5，讨论度第 1，留言集中在排班表细节。</li>
+      <li style="display:list-item"><b>C-29 裁缝铺学徒与三维建模</b> · 评委分 91.0 为全场最高，口碑票 2,904 排第 14，两组分数差距悬殊。</li>
+      <li style="display:list-item"><b>C-17 柜员与百公里越野跑</b> · 票数核减后 4,101，评委分 84.0，口述稿 76 秒，包含两张图的拍摄顺序说明。</li>
+      <li style="display:list-item"><b>C-02 兼职骑手与末班地铁</b> · 评委分 82.5，故事票第 2，教材封面在两张图里都可辨认。</li>
+      <li style="display:list-item"><b>C-31 审计底稿与黑胶收藏墙</b> · 编辑特别提名，评委分 80.0，作品未使用人物正脸，反差靠空间完成。</li>
+    </ol>
+    <p class="mini" style="margin-top:10px;color:var(--muted);font-size:var(--fs-xs)">注：口碑票与评委分分列统计，未合成总分。票数已于 11 月 7 日回滚重复计票。</p>
+  </section>
+
+  <section class="block" id="relate">
+    <div class="sec-head">
+      <h2>你可能还想找</h2>
+      <span class="tag">相关推荐</span>
+    </div>
+    <div class="tags">
+      <a href="/#picks">反差组图拍摄技巧</a>
+      <a href="/#guide">拍摄时间截图怎么截</a>
+      <a href="/#channels">工位与户外反差选题</a>
+      <a href="/#faq">同一个人怎么核验</a>
+      <a href="/#deep">评委打分表解读</a>
+      <a href="/#updates">城市通勤子话题补充说明</a>
+      <a href="/#picks">护士与鼓手类作品合集</a>
+      <a href="/#ranks">口碑票与评委分差异</a>
+      <a href="/#news">往届作品集口述稿</a>
+      <a href="/#guide">二次水印降权规则</a>
+    </div>
+  </section>
+
+</main>
+
+<aside class="side">
+  <div class="widget">
+    <h2>栏目导航</h2>
+    <ul class="side-nav" id="sideNav">
+      <li><a href="/#overview">领域概览</a></li>
+      <li><a href="/#picks">精选作品推荐</a></li>
+      <li><a href="/#updates">最新更新</a></li>
+      <li><a href="/#channels">反差类型频道</a></li>
+      <li><a href="/#deep">深度解析</a></li>
+      <li><a href="/#guide">体验指南</a></li>
+      <li><a href="/#faq">常见问题</a></li>
+      <li><a href="/#comments">观众评论</a></li>
+      <li><a href="/#news">相关资讯</a></li>
+      <li><a href="/#ranks">复赛榜单</a></li>
+    </ul>
+  </div>
+  <div class="widget">
+    <h2>热度前五</h2>
+    <ol class="rank-list">
+      <li>C-08 夜班护士与乐队鼓手</li>
+      <li>C-24 食堂大锅菜与法餐摆盘</li>
+      <li>C-17 柜员与百公里越野跑</li>
+      <li>C-29 裁缝铺学徒与三维建模</li>
+      <li>C-02 兼职骑手与末班地铁</li>
+    </ol>
+  </div>
+  <div class="widget">
+    <h2>关键时间</h2>
+    <p class="mini">11 月 8 日｜城市通勤命题补充说明</p>
+    <p class="mini">11 月 15 日｜复赛投票截止</p>
+    <p class="mini">11 月 18 日｜颁奖与口述稿公开</p>
+    <p class="mini">11 月 22 日｜线下展开幕</p>
+    <a class="btn" href="/#guide" style="margin-top:6px">下载报名表</a>
+  </div>
+</aside>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="brand-foot">
+          <svg viewBox="0 0 64 64" role="img" aria-label="反差推特大赛页尾标志">
+            <rect width="64" height="64" rx="14" fill="#f6f1e7"/>
+            <circle cx="23" cy="25" r="10" fill="#ff6b3d"/>
+            <rect x="30" y="31" width="24" height="20" rx="4" fill="#1b1b2b"/>
+            <path d="M8 52 L20 40 L32 52 Z" fill="#2f6f62"/>
+          </svg>
+          反差推特大赛
+        </div>
+        <p style="font-size:var(--fs-sm);color:#c1baac;max-width:26em">把一个人的两段真实状态摆到同一块屏幕里，让人先愣一下，再读细节。</p>
+      </div>
+      <div>
+        <h2>参赛与观看</h2>
+        <ul>
+          <li><a href="/#guide">投稿步骤</a></li>
+          <li><a href="/#faq">规则问答</a></li>
+          <li><a href="/#picks">入围作品</a></li>
+          <li><a href="/#ranks">复赛榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>反差频道</h2>
+        <ul>
+          <li><a href="/#channels">工位与户外</a></li>
+          <li><a href="/#channels">制服与私服</a></li>
+          <li><a href="/#channels">夜班与白天</a></li>
+          <li><a href="/#channels">出租屋与收藏</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fnote">
+      <span>页面所列作品编号、票数与评委分均为示例数据，用于说明评分口径，实际以公示页为准。</span>
+      <span>内容更新：11 月 8 日 · 对应补充说明与票数回滚两项正文条目</span>
+      <span>© 2026 反差推特大赛</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到顶部" title="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuToggle');
+  var nav = document.getElementById('mainNav');
+  menuBtn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 640){
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+    }
+  });
+
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('q');
+  var msg = document.getElementById('search-msg');
+  var blocks = Array.prototype.slice.call(document.querySelectorAll('main section.block'));
+  function clearHit(){
+    blocks.forEach(function(b){ b.style.outline=''; b.style.outlineOffset=''; });
+  }
+  function doSearch(){
+    var kw = (input.value || '').trim();
+    clearHit();
+    if(!kw){ msg.textContent = ''; return; }
+    var hits = [];
+    blocks.forEach(function(b){
+      if(b.textContent.indexOf(kw) !== -1) hits.push(b);
+    });
+    if(hits.length === 0){
+      msg.textContent = '没有找到与「' + kw + '」相关的内容，换个关键词试试：工位、夜班、水印、评委分。';
+      return;
+    }
+    hits.forEach(function(b){ b.style.outline='3px solid rgba(255,107,61,.5)'; b.style.outlineOffset='6px'; });
+    msg.textContent = '找到 ' + hits.length + ' 个相关板块，已用橙色边框标出。';
+    hits[0].scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  document.getElementById('searchBtn').addEventListener('click', doSearch);
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+  input.addEventListener('input', function(){ if(input.value.trim()===''){ clearHit(); msg.textContent=''; } });
+
+  var toTop = document.getElementById('toTop');
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('nav.main a'));
+  function onScroll(){
+    var y = window.scrollY || window.pageYOffset;
+    toTop.classList.toggle('show', y > 520);
+    var current = null;
+    blocks.forEach(function(b){
+      if(b.getBoundingClientRect().top <= 160) current = b.id;
+    });
+    sideLinks.forEach(function(a){
+      a.classList.toggle('active', current && a.getAttribute('href') === '/#' + current);
+    });
+    navLinks.forEach(function(a){
+      a.classList.toggle('active', current && a.getAttribute('href') === '/#' + current);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+  </html>
